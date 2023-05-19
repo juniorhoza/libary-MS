@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.libmswgui.HelloController">
+   <children>
+      <Label layoutX="56.0" layoutY="92.0" prefHeight="18.0" prefWidth="114.0" text="Title: " />
+      <Label layoutX="63.0" layoutY="140.0" prefHeight="18.0" prefWidth="114.0" text="Author:" />
+      <Label layoutX="56.0" layoutY="189.0" prefHeight="18.0" prefWidth="114.0" text="Number of copies" />
+      <Button fx:id="addNew" layoutX="208.0" layoutY="251.0" mnemonicParsing="false" onAction="#AddnewBook" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: blue;" text="Add Book" textFill="WHITE" visible="false" />
+      <Label layoutX="170.0" layoutY="27.0" prefHeight="39.0" prefWidth="374.0" style="-fx-font-family: poppins; -fx-font-size: 18;" text="Book managment system" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="update" layoutX="336.0" layoutY="251.0" mnemonicParsing="false" onAction="#updateBook" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: orange;" text="Update Book" textFill="#f8f7f7" visible="false" />
+      <Label fx:id="titleErr" layoutX="329.0" layoutY="101.0" prefHeight="18.0" prefWidth="184.0" text="invalid input" textFill="#f80a0a" visible="false" />
+      <Label fx:id="authorErr" layoutX="339.0" layoutY="145.0" prefHeight="18.0" prefWidth="184.0" text="invalid input" textFill="#f80a0a" visible="false" />
+      <Label fx:id="copiesErr" layoutX="339.0" layoutY="190.0" prefHeight="18.0" prefWidth="184.0" text="invalid input" textAlignment="CENTER" textFill="#f80a0a" visible="false" />
+      <TextField fx:id="title" layoutX="170.0" layoutY="93.0" />
+      <TextField fx:id="author" layoutX="170.0" layoutY="141.0" />
+      <TextField fx:id="copies" layoutX="170.0" layoutY="186.0" />
+      <TableView fx:id="booksTable" layoutX="2.0" layoutY="354.0" prefHeight="200.0" prefWidth="766.0">
+        <columns>
+          <TableColumn fx:id="IdCol" prefWidth="250.0" text="ID" />
+          <TableColumn fx:id="titleCol" prefWidth="230.0" text="Title" />
+            <TableColumn fx:id="authorCol" prefWidth="135.0" text="Author" />
+            <TableColumn fx:id="copiesCol" prefWidth="137.0" text="Number of copies" />
+        </columns>
+      </TableView>
+      <Button fx:id="loadTable" layoutX="68.0" layoutY="254.0" mnemonicParsing="false" onAction="#loadtable" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: green;" text="load table" textFill="WHITE" />
+   </children>
+</Pane>
